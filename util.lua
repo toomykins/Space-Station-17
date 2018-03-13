@@ -17,17 +17,7 @@ function makewall(xx,yy)
    instantiate(presets.wall,xx,yy)
 end
 
-function checkbutton(string)
-   for i,obj in ipairs(btns) do
-      if touch.x > obj.x and touch.x < (obj.x + obj.width) and touch.y > obj.y and touch.y < (obj.y + obj.height) then
-         if obj.name == string and touch.istouching then
-            return true
-         else
-            return false
-         end
-      end
-   end
-end
+
 
 --function vision(dt)
    --for x = players[mainplayer].x - 16,players[mainplayer].x + 16,1 do

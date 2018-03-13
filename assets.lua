@@ -16,6 +16,9 @@ human = {
    east = love.graphics.newQuad(128,0,32,32,480,480),
    west = love.graphics.newQuad(160,0,32,32,480,480)
 }
+human.image:setFilter('nearest', 'nearest')
+floors.image:setFilter('nearest', 'nearest')
+walls.image:setFilter('nearest', 'nearest')
 end
 
 function loadmap_box()
