@@ -29,7 +29,7 @@ function love.update(dt)
 end
 
 function love.textinput(t)
-    suit.textinput(t) -- for some fucking reason suit registers 2 inputs.
+    suit.textinput(t) -- for some fucking reason suit registers 2 inputs whenusing registerEvents(), so i'm just registering manually.
 end
  
 function love.keypressed(key)
@@ -41,3 +41,7 @@ function love.draw()
   suit.draw()
   Gamestate:draw()
 end
+
+function love.wheelmoved(x,y)
+  Gamestate.wheelmoved(x,y)
+  end
