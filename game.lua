@@ -1,3 +1,4 @@
+local game = {}
 local text = ""
 -- TODO
 -- 1# fix the walking timer system
@@ -18,6 +19,7 @@ function game:init()
       height = love.graphics.getHeight()
    }
    
+  
 
    map = {}
    items = {}
@@ -25,7 +27,7 @@ function game:init()
    load_presets()
    loadmap_box()
    players = {
-      {x = 1,y = 1,race = human,quad = "south",timer = {max = 100,counter = -1}}
+      {x = 1,y = 1,race = human,quad = "south",timer = {max = 12,counter = -1}}
    }
    framecount = 0
    mainplayer = 1
@@ -131,3 +133,4 @@ if y > 0 then
     else text = "mouse no"
   end
 end
+return game

@@ -1,7 +1,10 @@
 -- suit up
-local suit = require 'lib.suit'
+--local suit = require 'lib.suit'
 --Gamestate = require("lib.hump.gamestate")
 -- storage for text input
+
+local menu = {}
+
 local input = {text = ""}
 
 -- make love use font which support CJK text
@@ -34,22 +37,10 @@ function menu:update(dt)
 	end
 end
 
-function menu:draw()
+--function menu:draw()
 	-- draw the gui
 	
-end
+--end
 
-function menu:textedited(text, start, length)
-    -- for IME input
-    suit.textedited(text, start, length)
-end
 
-function menu:textinput(t)
-	-- forward text input to SUIT
-	suit.textinput(t)
-end
-
-function menu:keypressed(key)
-	-- forward keypresses to SUIT
-	suit.keypressed(key)
-end
+return menu
