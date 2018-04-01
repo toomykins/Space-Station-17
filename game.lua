@@ -128,6 +128,7 @@ end
 
 function game:wheelmoved(x,y)
 if y > 0 then
+  
   text = y
   camera.scale = camera.scale + 0.5
   elseif y <0 then
