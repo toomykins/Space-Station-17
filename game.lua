@@ -10,6 +10,8 @@ require("presetsfile")
 flux = require("lib.flux")
 hump = require("lib.hump")
 Camera = require("lib.hump.camera")
+--CameraSystem = require("lib.camerasystem")
+
 
 function game:init()
     
@@ -118,8 +120,10 @@ function game:draw()
    	
   
     camera:detach();
+    
    	love.graphics.print(players[1].x .. " " .. players[1].y .. " " .. players[1].timer.counter,0,0,0,3)
    	love.graphics.print(camera.scale,0,40)
+    love.graphics.print(98,0,70)
 end
 
 function game:wheelmoved(x,y)

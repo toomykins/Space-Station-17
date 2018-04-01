@@ -1,6 +1,6 @@
 -- suit up
 --local suit = require 'lib.suit'
---Gamestate = require("lib.hump.gamestate")
+--StateMachine = require("lib.hump.StateMachine")
 -- storage for text input
 
 local menu = {}
@@ -31,8 +31,8 @@ function menu:update(dt)
 	-- put a button of size 200x30 px in the cell below
 	-- if the button is pressed, quit the game
 	if suit.Button("Close", suit.layout:row()).hit then
-		Gamestate.switch(game)
-    Gamestate.init()
+		StateMachine.switch(game)
+    StateMachine.init()
     love.window.setTitle("ive showed you my dick now answer me")
 	end
 end

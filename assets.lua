@@ -7,7 +7,7 @@ floors = {
 }
 walls = {
    image = love.graphics.newImage("walls.png"),
-   wall = love.graphics.newQuad(0,0,32,32,22 * 32,22 * 32)
+   wall = love.graphics.newQuad(0,0,32,32,22 * 32,22 * 64)
 }
 human = {
    image = love.graphics.newImage("human.png"),
@@ -29,8 +29,8 @@ function loadmap_box()
 	    		end
 	  	end
 
-   for x = 5,10,1 do
-      for y = 5,10,1 do
+   for x = 5,100,1 do
+      for y = 5,15,1 do
 				      instantiate(presets.floor,x,y)
       end
    end
